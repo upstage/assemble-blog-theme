@@ -1,0 +1,20 @@
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: THIS CODE IS ONLY AN EXAMPLE * * */
+    // Required - Replace example with your forum shortname
+    var disqus_shortname = '{{site.disqus.shortname}}';
+    // a unique identifier for each page where Disqus is present. Example: '/december-2010/the-best-day-of-my-life/'
+    var disqus_identifier = '{{site.blog}}/{{this.filename}}';
+    // a unique title for each page where Disqus is present
+    var disqus_title = '{{default title this.basename}}'; // if no "title" exists, use the basename of the file.
+    // a unique URL for each page where Disqus is present
+    var disqus_url = '{{this.basename}}';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>

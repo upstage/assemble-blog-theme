@@ -1,0 +1,27 @@
+{{#prettify}}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{!-- Meta, title, CSS, favicons, etc. --}}
+    {{> head }}
+    {{!-- Place anything custom after this --}}
+  </head>
+  <body>
+    <a class="sr-only" href="#content">Skip navigation</a>
+
+    <!-- Navbar -->
+    {{> nav-main }}
+
+
+    <!-- Content -->
+    <div class="container">
+      {{> body }}
+    </div>
+
+
+    <!-- JS and analytics only. -->
+    {{> footer }}
+
+  </body>
+</html>
+{{/prettify}}

@@ -1,0 +1,106 @@
+//
+// Posts
+// --------------------------------------------------
+
+
+@post-heading-color: #222;
+@post-link-color: #444;
+@post-border-color: #f2f2f0;
+@post-padding: 30px;
+
+// Clear floats
+.post,
+.post-body {
+  overflow: hidden;
+  zoom: 1;
+}
+
+
+// Base
+.post {
+  position: relative;
+  display: block;
+  margin-top: @post-padding + 20px;
+  padding-top: @post-padding;
+  padding-bottom: @post-padding;
+  border-top: 1px solid @post-border-color;
+  word-wrap: break-word;
+  .transition(opacity .5s linear);
+  &:first-of-type {
+    border-top: none;
+  }
+}
+
+// Remove border when a post follows a pager
+.pager + .post {
+  border-top: none;
+}
+
+
+// Proper spacing between instances of .post
+.post,
+.post .post {
+  margin-top: 15px;
+}
+.post:first-child {
+  margin-top: 0;
+}
+.post-body {
+  font-family: @font-family-serif;
+  font-size: 18px;
+}
+
+// For images and videos, set to block
+.post-object {
+  display: block;
+  border-radius: 100px;
+}
+
+// Reset margins on headings for tighter default spacing
+.post-heading {
+  color: @post-heading-color;
+  font-weight: 700;
+  margin: 0 0 5px;
+  &:hover {
+    color: @post-link-color;
+  }
+}
+.post-body {
+  a, a:hover, a:focus {
+    color: @post-link-color;
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+// For "Read more" links, date, or supplemental info
+.post-footer {
+  font-size: 16px;
+  padding: 15px 0;
+  a, a:hover, a:focus {
+    color: @post-link-color;
+  }
+}
+
+
+// post image alignment
+// -------------------------
+
+.post {
+  > .pull-left {
+    margin-right: 10px;
+  }
+  > .pull-right {
+    margin-left: 10px;
+  }
+}
+
+
+// post list variation
+// -------------------------
+
+// Undo default ul/ol styles
+.post-list {
+  padding-left: 0;
+  list-style: none;
+}

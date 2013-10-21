@@ -1,0 +1,31 @@
+//
+// Theme Styles
+// --------------------------------------------------
+
+
+// Theme variables
+@import "variables.less";
+
+// Bootstrap components
+@import "bootstrap.less";
+
+// Theme components
+@import "pagers.less";
+@import "posts.less";
+
+
+// Increase body padding based on navbar height.
+body {
+  padding-top: @navbar-height + 10px;
+}
+
+
+// Extend Bootstrap's nav
+.main-nav:extend(.bs-docs-nav all) {
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15);
+  background-color: #563D7C;
+  border-color: #463265;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+

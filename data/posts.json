@@ -1,0 +1,39 @@
+{
+  "content": "./content",
+  "layout": "./templates/layouts/blog.hbs",
+  "foo": [
+    {
+      "data": {
+        "title": "My First Post",
+        "date": "2013-01-01",
+        "layout": "<%= posts.layout %>",
+        "categories": [],
+        "tags": []
+      },
+      "content": "{{lorem ipsum.paragraph}} {{> disqus }}",
+      "filename": "2013-01-01.html"
+    },
+    {
+      "data": {
+        "title": "My Second Post",
+        "date": "2014-01-02",
+        "layout": "<%= posts.layout %>",
+        "categories": [],
+        "tags": []
+      },
+      "content": "{{lorem ipsum.paragraph}} {{> disqus }}",
+      "filename": "2013-01-02.html"
+    },
+    {
+      "data": {
+        "title": "My Third Post",
+        "date": "2014-01-02",
+        "layout": "<%= posts.layout %>",
+        "categories": [],
+        "tags": []
+      },
+      "content": "{{lorem ipsum.paragraph}} {{> disqus }}",
+      "filename": "2013-01-03.html"
+    }
+  ]
+}

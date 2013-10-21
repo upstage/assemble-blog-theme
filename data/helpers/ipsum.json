@@ -1,0 +1,19 @@
+{
+  "notes": "Config options for the {{lorem}} helper.",
+  "words": {
+    "count": 5,
+    "units": "words"
+  },
+  "sentence": {
+    "count": 3,
+    "units": "sentences",
+    "sentenceLowerBound": 10,
+    "sentenceUpperBound": 15
+  },
+  "paragraph": {
+    "count": 5,
+    "units": "paragraphs",
+    "sentenceLowerBound": 5,
+    "sentenceUpperBound": 25
+  }
+}

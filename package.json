@@ -1,0 +1,46 @@
+{
+  "name": "blog",
+  "description": "The best project ever.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jonschlinkert/blog",
+  "author": {
+    "name": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonschlinkert/blog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jonschlinkert/blog/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/jonschlinkert/blog/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "lib/blog",
+  "devDependencies": {
+    "assemble": "~0.4.12",
+    "assemble-less": "~0.5.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-connect": "~0.5.0",
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-watch": "~0.5.1",
+    "helper-compose": "~0.1.1",
+    "helper-prettify": "~0.1.7",
+    "lorem-ipsum": "~0.1.1",
+    "permalinks": "~0.1.8"
+  },
+  "keywords": [
+    "static site generator",
+    "yeoman static site generator",
+    "grunt static site generator",
+    "site generator",
+    "component generator",
+    "blog generator",
+    "handlebars",
+    "templates"
+  ]
+}

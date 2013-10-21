@@ -1,0 +1,19 @@
+title: Blog
+description: "Blog theme, for Assemble."
+
+
+license:
+  type: MIT License
+  link: ./license.html
+
+
+root: _gh_pages
+dest: <%= site.root %>
+
+
+blog: http://assemble.io/blog
+repo: https://github.com/assemble/assemble
+
+
+disqus:
+  shortname: assemble

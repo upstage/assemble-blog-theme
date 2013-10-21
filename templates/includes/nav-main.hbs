@@ -1,0 +1,18 @@
+<header class="navbar navbar-fixed-top navbar-default" role="banner">
+  <div class="navbar-header">
+    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a href="{{root}}/" class="navbar-brand">{{site.title}}</a>
+  </div>
+  <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+    <ul class="nav navbar-nav pull-right">
+      <li{{#is page.basename "about" }} class="active"{{/is}}>
+        <a href="{{root}}/about/">About</a>
+      </li>
+    </ul>
+  </nav>
+</header>

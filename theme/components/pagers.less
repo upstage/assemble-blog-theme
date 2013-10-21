@@ -1,0 +1,36 @@
+//
+// Paging
+// --------------------------------------------------
+
+@pager-border: #eee;
+
+// Adds light border above and below pager
+.pager {
+  padding: 5px 0;
+  border-top: 1px solid @pager-border;
+  border-bottom: 1px solid @pager-border;
+}
+
+
+// Basic inline heading for pager
+.pager .pager-heading {
+  font-size: 16px;
+  float: left;
+  padding: 5px 0 0;
+}
+
+// Pager buttons span 50% of the container width
+.pager-justified {
+  padding: 0;
+  li > a {
+    display: block;
+    width: 50%;
+    margin: 0;
+    padding: 8px 0;
+    border-radius: 0;
+    border: none;
+  }
+  .pager-heading {
+    padding: 8px 0 0;
+  }
+}

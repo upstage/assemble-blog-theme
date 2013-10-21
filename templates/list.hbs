@@ -1,0 +1,24 @@
+---
+title: Blog
+---
+{{! this isn't working yet! So please don't create issues about it :-}}
+{{#compose "*.md"}}
+<article class="post post-item">
+  <a class="anchor" href="#{{id}}"></a>
+  <a class="pull-right" href="#">
+    <img class="post-object" data-src="{{assets}}/js/holder.js/72x72" alt="Generic placeholder image" src="data:image/png;base64,">
+  </a>
+  <div class="post-body">
+    <a href="#"><h2 class="post-heading">Post heading</h2></a>
+    {{{content}}}
+  </div>
+  <ul class="tags">
+  {{#tags}}
+    <li class="link">{{.}}</li>
+  {{/tags}}
+  </ul>
+  <div class="post-footer">
+    <a class="text-muted" href="#">Read more...</a>
+  </div>
+</article>
+{{/compose}}
