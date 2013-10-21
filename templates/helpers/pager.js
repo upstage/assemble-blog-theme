@@ -20,7 +20,12 @@ module.exports.register = function (Handlebars, options) {
   /**
    * {{pager}}
    */
-  exports.pager = function(modifier, context) {
+  exports.pager = function(context, modifier) {
+    if(_.isUndefined(modifier)) {
+      modifier = '';
+    } else {
+      modifier = modifier;
+    }
     var markup = [
       '<ul class="pager '  + modifier + '">',
       '  <li class="previous"><a href="#">&larr; Previous</a></li>',
