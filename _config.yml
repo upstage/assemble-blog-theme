@@ -29,7 +29,7 @@ google_site_id: false
 
 # Comments
 disqus:
-  shortname: assemble
+  shortname: assemble-blog-theme
 
 
 # Social
