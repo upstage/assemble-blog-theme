@@ -7,11 +7,24 @@
 
 ## Examples
 
-![image](https://f.cloud.github.com/assets/383994/1379436/2791d8ce-3aee-11e3-81af-a1605b480c55.png)
+### Small screens
+
+![image](https://f.cloud.github.com/assets/383994/1379534/be044754-3af0-11e3-8677-9815a344d672.png)
 
 ***
 
-![image](https://f.cloud.github.com/assets/383994/1379439/36c8c5fa-3aee-11e3-99fb-daa28b7a9e7b.png)
+### Pads
+![image](https://f.cloud.github.com/assets/383994/1379539/efd206c2-3af0-11e3-8fa6-9684a5b22acb.png)
+
+***
+
+### Large screens
+
+![image](https://f.cloud.github.com/assets/383994/1379542/0f5a4fae-3af1-11e3-9355-5da08e8f362b.png)
+
+***
+
+![image](https://f.cloud.github.com/assets/383994/1379547/279385a4-3af1-11e3-97f8-bd971cbf61a5.png)
 
 
 ## Contributing
