@@ -6,8 +6,10 @@
 
 
 ## Overview
-The theme is based on [Bootstrap](https://github.com/twbs/bootstrap).
 
+* Theme is based on [Bootstrap](https://github.com/twbs/bootstrap).
+* Disqus comments
+* Paging for posts
 
 
 ## Examples
@@ -24,6 +26,9 @@ The theme is based on [Bootstrap](https://github.com/twbs/bootstrap).
 ***
 
 ### Large screens
+![image](https://f.cloud.github.com/assets/383994/1379610/c48022c6-3af3-11e3-9bcb-12b0dd549e52.png)
+
+***
 
 ![image](https://f.cloud.github.com/assets/383994/1379542/0f5a4fae-3af1-11e3-9355-5da08e8f362b.png)
 

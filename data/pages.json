@@ -13,7 +13,7 @@
         "categories": [],
         "tags": []
       },
-      "content": "<%= pages.thumbnail %>{{lorem ipsum.paragraph}} {{> disqus }}",
+      "content": "<%= pages.thumbnail %>{{lorem ipsum.paragraph}}",
       "filename": "2014-01-01.html"
     },
     {
@@ -24,7 +24,7 @@
         "categories": [],
         "tags": []
       },
-      "content": "<%= pages.thumbnail %>{{lorem ipsum.paragraph}} {{> disqus }}",
+      "content": "<%= pages.thumbnail %>{{lorem ipsum.paragraph}}",
       "filename": "2014-01-02.html"
     },
     {
@@ -35,7 +35,7 @@
         "categories": [],
         "tags": []
       },
-      "content": "<%= pages.thumbnail %>{{lorem ipsum.paragraph}} {{> disqus }}",
+      "content": "<%= pages.thumbnail %>{{lorem ipsum.paragraph}}",
       "filename": "2014-01-03.html"
     }
   ]
