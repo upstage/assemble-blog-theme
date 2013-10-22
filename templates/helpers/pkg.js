@@ -1,6 +1,6 @@
 /**
- * Handlebars Helpers
- * Copyright (c) 2013 lesscss.org
+ * Handlebars Helper: {{pkg}}
+ * Copyright (c) 2013 Jon Schlinkert
  * Licensed under the MIT License (MIT).
  */
 
@@ -24,6 +24,8 @@ module.exports.register = function (Handlebars, options) {
    * Return a property from package.json
    * @param  {String} key
    * @return {String}
+   * @example
+   *  v{{pkg 'version'}} => v0.1.0
    */
   exports.pkg = function(key) {
     options = _.defaults(options, config);

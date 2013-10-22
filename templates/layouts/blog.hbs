@@ -1,28 +1,11 @@
-{{#prettify}}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    {{!-- Meta, title, CSS, favicons, etc. --}}
-    {{> head }}
-    {{!-- Place anything custom after this --}}
-  </head>
-  <body>
-    <a class="sr-only" href="#content">Skip navigation</a>
+---
+layout: default.hbs
+---
+<!-- Pagination -->
+{{pager pagination modifier="pager-justified"}}
 
-    <!-- Navbar -->
-    {{> nav-main }}
+<!-- Blog Posts -->
+{{> body }}
 
-    <!-- Content -->
-    <div class="container">
-      <h1>{{title}}</h1>
-      {{> body }}
-      {{> disqus }}
-    </div>
-
-
-    <!-- JS and analytics only. -->
-    {{> footer }}
-
-  </body>
-</html>
-{{/prettify}}
+<!-- Comments -->
+{{> disqus }}

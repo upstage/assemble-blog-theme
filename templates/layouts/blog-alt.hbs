@@ -1,0 +1,21 @@
+---
+layout: default.hbs
+---
+{{#isnt basename "index"}}
+  <!-- Pagination -->
+  {{pager pagination modifier="pager-justified"}}
+
+  <!-- Blog Posts -->
+  {{#markdown}}
+    {{> body }}
+  {{/markdown}}
+
+  <!-- Comments -->
+  {{> disqus }}
+{{/isnt}}
+
+{{!#is basename "index"}}
+  {{!#each pages}}
+    {{!posts}}
+  {{!/each}}
+{{!/is}}

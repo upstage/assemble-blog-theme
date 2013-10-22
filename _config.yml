@@ -6,7 +6,7 @@ dest: _gh_pages
 title: Blog
 lead: false
 description: >
-  "Blog theme, for Assemble."
+  "Blog theme and boilerplate, for Assemble."
 
 # License info
 license:
@@ -15,8 +15,8 @@ license:
 
 
 # URLs
-blog: http://assemble.io/blog
-repo: https://github.com/assemble/assemble
+blog: http://upstage.github.io/assemble-blog-theme/
+repo: https://github.com/upstage/assemble-blog-theme
 download:
   source: <%= site.repo %>/archive/master.zip
   source: <%= site.repo %>/archive/master.zip
