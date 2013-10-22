@@ -16,7 +16,7 @@ module.exports = function(grunt) {
     pkg   : grunt.file.readJSON('package.json'),
     vendor: grunt.file.readJSON('.bowerrc').directory,
     site  : grunt.file.readYAML('_config.yml'),
-    posts : grunt.file.readJSON('data/posts.json'),
+    pages : grunt.file.readJSON('data/pages.json'),
 
 
     config: {
@@ -25,7 +25,10 @@ module.exports = function(grunt) {
       bootstrap: '<%= vendor %>/bootstrap/less'
     },
 
-    // Lint JavaScript
+
+    /**
+     * Lint JavaScript
+     */
     jshint: {
       all: ['Gruntfile.js', 'helpers/*.js'],
       options: {
@@ -33,59 +36,79 @@ module.exports = function(grunt) {
       }
     },
 
-    // Build HTML from templates and data
+
+    /**
+     * Build HTML from templates and data
+     */
     assemble: {
       options: {
         flatten: true,
 
-        // Custom property
+        // Custom property for _config.yml
         site: '<%= site %>',
 
-        // Site variables (automatically calculated paths)
-        root: '<%= site.dest %>',
-        assets: '<%= site.dest %>/assets',
-
         // Extensions
+        helpers: ['helper-prettify', 'helper-compose', 'templates/helpers/*.js'],
         // plugins: ['permalinks'],
-        helpers: [
-          'helper-prettify',
-          'helper-compose',
-          'templates/helpers/*.js'
-        ],
+        // permalinks: {
+        //   preset: 'pretty'
+        // }
         // Templates and data
+        data: ['data/**/*.{json,yml}'],
         partials: ['templates/includes/*.hbs'],
-        layout: 'templates/layouts/default.hbs',
-        data: ['data/**/*.{json,yml}']
+        layoutdir: 'templates/layouts',
+        layout: 'default.hbs',
+
+        // Site variables
+        assets: '<%= site.dest %>/assets',
+        root: '<%= site.dest %>',
       },
+      // Generate the main pages of the site.
+      site: {
+        files: {
+          '<%= site.dest %>/': ['templates/*.hbs']
+        }
+      },
+      // Generate posts from "./data/pages.json"
       blog: {
         options: {
-          pages: '<%= posts.foo %>'
+          pages: '<%= pages.posts %>'
         },
-        files: {'<%= site.dest %>/': ['templates/blog.hbs']}
+        files: {
+          '<%= site.dest %>/': ['templates/index.hbs']
+        }
       },
-      example: {
+      // Generate posts by forcing Handlebars
+      // to recognize `.md` files as templates.
+      blog_alt: {
         options: {
-          // permalinks: {
-          //   preset: 'pretty'
-          // }
+          layout: 'blog.hbs',
+          engine: 'handlebars'
         },
-        files: {'<%= site.dest %>/': ['templates/*.hbs']}
+        files: {
+          '<%= site.dest %>/alt/': ['templates/list.hbs', 'posts/*.md']
+        }
       }
     },
 
 
-    // Compile LESS to CSS
+    /**
+     * Compile LESS to CSS
+     */
     less: {
       options: {
         paths: ['theme/bootstrap', 'theme/components'],
       },
-      // Compile Bootstrap's LESS
       bootstrap: {
         src: ['theme/theme.less'],
         dest: '<%= assemble.options.assets %>/css/blog.css'
       }
     },
 
+
+    /**
+     * Start a connect web server.
+     */
     connect: {
       options: {
         port: 9000,
@@ -103,12 +126,21 @@ module.exports = function(grunt) {
       }
     },
 
-    // Before generating any new files,
-    // remove any previously-created files.
+
+    /**
+     * Before generating any new files,
+     * clean out files from previous build.
+     */
     clean: {
-      example: ['<%= site.dest %>/*.html']
+      example: ['<%= site.dest %>/**/*.html']
     },
 
+
+
+    /**
+     * Run predefined tasks whenever watched file
+     * patterns are added, changed or deleted.
+     */
     watch: {
       all: {
         files: ['<%= jshint.all %>'],
@@ -129,9 +161,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('assemble-less');
   grunt.loadNpmTasks('assemble');
 
-  // Build HTML, compile LESS and watch for changes. You must first run "bower install"
-  // or install Bootstrap to the "vendor" directory before running this command.
-  grunt.registerTask('design', ['clean', 'assemble', 'less:bootstrap', 'watch:design']);
+  // Build HTML, compile LESS and watch for changes.
+  grunt.registerTask('design', ['clean', 'assemble', 'less:bootstrap', 'watch:design', 'connect']);
 
   // Default tasks to be run.
   grunt.registerTask('default', ['clean', 'jshint', 'less', 'assemble']);

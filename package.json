@@ -30,7 +30,8 @@
     "helper-compose": "~0.1.1",
     "helper-prettify": "~0.1.7",
     "lorem-ipsum": "~0.1.1",
-    "permalinks": "~0.1.8"
+    "permalinks": "~0.1.8",
+    "lodash": "~2.2.1"
   },
   "keywords": [
     "upstage",

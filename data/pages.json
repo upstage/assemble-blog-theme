@@ -1,0 +1,42 @@
+{
+  "content": "./content",
+  "thumbnail": "<img class=\"thumbnail\" data-src=\"holder.js/100%x200/auto\">",
+  "layouts": {
+    "blog": "blog.hbs"
+  },
+  "posts": [
+    {
+      "data": {
+        "title": "My First Post",
+        "date": "2014-01-01",
+        "layout": "<%= pages.layouts.blog %>",
+        "categories": [],
+        "tags": []
+      },
+      "content": "<%= pages.thumbnail %>{{lorem ipsum.paragraph}} {{> disqus }}",
+      "filename": "2014-01-01.html"
+    },
+    {
+      "data": {
+        "title": "My Second Post",
+        "date": "2014-01-02",
+        "layout": "<%= pages.layouts.blog %>",
+        "categories": [],
+        "tags": []
+      },
+      "content": "<%= pages.thumbnail %>{{lorem ipsum.paragraph}} {{> disqus }}",
+      "filename": "2014-01-02.html"
+    },
+    {
+      "data": {
+        "title": "My Third Post",
+        "date": "2014-01-02",
+        "layout": "<%= pages.layouts.blog %>",
+        "categories": [],
+        "tags": []
+      },
+      "content": "<%= pages.thumbnail %>{{lorem ipsum.paragraph}} {{> disqus }}",
+      "filename": "2014-01-03.html"
+    }
+  ]
+}
