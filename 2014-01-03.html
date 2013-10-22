@@ -13,51 +13,59 @@
 
     <!-- Navbar -->
     <header class="navbar navbar-fixed-top navbar-default" role="banner">
-      <div class="navbar-header">
-        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-          <span class="sr-only">Toggle navigation</span> 
-          <span class="icon-bar"></span> 
-          <span class="icon-bar"></span> 
-          <span class="icon-bar"></span> 
-        </button>
-        <a href="./index.html" class="navbar-brand">Blog</a> 
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span> 
+            <span class="icon-bar"></span> 
+            <span class="icon-bar"></span> 
+            <span class="icon-bar"></span> 
+          </button>
+          <a href="./index.html" class="navbar-brand">Blog</a> 
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+          <ul class="nav navbar-nav pull-right">
+            <li>
+              <a href="./about.html">About</a> 
+            </li>
+          </ul>
+        </nav>
       </div>
-      <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-        <ul class="nav navbar-nav pull-right">
-          <li>
-            <a href="./about.html">About</a> 
-          </li>
-        </ul>
-      </nav>
     </header>
 
     <!-- Content -->
     <div class="container">
-      <h1>My Third Post</h1> 
-      <ul class="pager ">
+
+      <!-- Pagination -->
+      <ul class="pager pager-justified">
         <li class="previous">
-          <a href="2013-01-02.html">&larr; Previous</a> 
+          <a href="2014-01-02.html">&larr; Previous</a> 
         </li>
-        <li class="next">
-          <a href="2013-01-03.html">Next &rarr;</a> 
+        <li class="next disabled">
+          <a href="2014-01-03.html">Next &rarr;</a> 
         </li>
       </ul>
-      <p>Minim do consectetur commodo adipisicing cillum laboris reprehenderit deserunt eiusmod consectetur ea in. Minim dolor ut eiusmod qui minim culpa ex adipisicing ut veniam est. Exercitation ea eu velit dolor occaecat enim magna et in excepteur do.</p>
-      <p>Cupidatat aliquip ea ea culpa excepteur enim elit ex commodo consequat nulla culpa commodo in pariatur tempor quis enim voluptate. Ea proident eu voluptate enim quis cupidatat laborum ex do proident enim ex veniam. Mollit esse Lorem ut reprehenderit
-        laboris non dolor ullamco pariatur officia aute eu.</p>
-      <p>Anim incididunt excepteur cupidatat aute elit eu pariatur ut aliqua anim nostrud sit quis adipisicing. Culpa ea in sunt dolor Lorem sint mollit nulla cillum. Sit dolor sunt cupidatat qui Lorem fugiat labore nulla anim ut. Mollit officia tempor quis
-        magna dolor minim veniam et dolore enim pariatur. Tempor minim ut magna et sit sit adipisicing magna nostrud.</p>
+
+      <!-- Blog Posts -->
+      <img class="thumbnail" data-src="holder.js/100%x200/auto">
+      <p>Fugiat magna ea reprehenderit sunt qui anim veniam enim consectetur dolor. Officia veniam in esse pariatur irure ipsum ipsum aute consectetur. Reprehenderit dolor cupidatat veniam nisi aliqua ex excepteur culpa aliquip aliqua anim pariatur cupidatat
+        nisi. Aliqua magna amet do esse proident velit pariatur labore ullamco est culpa ut. Lorem occaecat esse officia officia ullamco ad esse duis enim magna. Elit cillum non consectetur nostrud non proident tempor minim excepteur occaecat Lorem quis
+        voluptate elit cupidatat magna laboris nostrud. Dolore exercitation fugiat ipsum fugiat Lorem laboris ullamco ullamco ex in enim.</p>
+      <p>Ad mollit et duis in enim in minim anim consectetur ullamco do laborum reprehenderit. Fugiat minim culpa est in consectetur esse ullamco ipsum aute mollit nisi non et eu ad nulla nisi. Dolor culpa esse fugiat anim tempor consequat in aliqua reprehenderit
+        minim. Consectetur laboris sunt in consequat nisi dolor quis nostrud id ullamco commodo nisi irure. Enim tempor irure non est in pariatur non Lorem anim pariatur veniam mollit sunt.</p>
+      <p>Irure ullamco aliquip Lorem sit consectetur tempor amet et veniam duis nisi consectetur. Officia laborum occaecat ut velit laboris aliquip irure laborum nisi anim. Veniam enim et est est irure labore proident aute enim aute nulla velit anim. Reprehenderit
+        in duis culpa sint tempor occaecat eu velit eu enim dolor cillum in non proident. Non proident irure fugiat sit exercitation eu esse magna esse esse nisi id fugiat ad.</p>
       <div id="disqus_thread"></div>
       <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: THIS CODE IS ONLY AN EXAMPLE * * */
          // Required - Replace example with your forum shortname
         var disqus_shortname = 'assemble';
          // a unique identifier for each page where Disqus is present. Example: '/december-2010/the-best-day-of-my-life/'
-        var disqus_identifier = 'http://assemble.io/blog/2013-01-03.html';
+        var disqus_identifier = 'http://upstage.github.io/assemble-blog-theme//2014-01-03.html';
          // a unique title for each page where Disqus is present
         var disqus_title = 'My Third Post'; // if no "title" exists, use the basename of the file.
          // a unique URL for each page where Disqus is present
-        var disqus_url = '2013-01-03';
+        var disqus_url = '2014-01-03';
         /* * * DON'T EDIT BELOW THIS LINE * * */
          (function() {
           var dsq = document.createElement('script');
@@ -70,17 +78,19 @@
       <noscript>Please enable JavaScript to view the
         <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a> 
       </noscript>
+
+      <!-- Comments -->
       <div id="disqus_thread"></div>
       <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: THIS CODE IS ONLY AN EXAMPLE * * */
          // Required - Replace example with your forum shortname
         var disqus_shortname = 'assemble';
          // a unique identifier for each page where Disqus is present. Example: '/december-2010/the-best-day-of-my-life/'
-        var disqus_identifier = 'http://assemble.io/blog/2013-01-03.html';
+        var disqus_identifier = 'http://upstage.github.io/assemble-blog-theme//2014-01-03.html';
          // a unique title for each page where Disqus is present
         var disqus_title = 'My Third Post'; // if no "title" exists, use the basename of the file.
          // a unique URL for each page where Disqus is present
-        var disqus_url = '2013-01-03';
+        var disqus_url = '2014-01-03';
         /* * * DON'T EDIT BELOW THIS LINE * * */
          (function() {
           var dsq = document.createElement('script');
@@ -98,22 +108,22 @@
     <!-- JS and analytics only. -->
     <footer class="bs-footer" role="contentinfo">
       <div class="container">
-        <p>&quot;Blog theme, for Assemble.&quot;
+        <p>&quot;Blog theme and boilerplate, for Assemble.&quot;
         </p>
         <p>Code licensed under the
-          <a href="_gh_pages/license/" target="_blank">MIT License</a>, documentation under
+          <a href="./license/" target="_blank">MIT License</a>, documentation under
           <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
         <ul class="footer-links">
           <li>
-            <a href="http://assemble.io/blog">Blog</a> 
+            <a href="http://upstage.github.io/assemble-blog-theme/">Blog</a> 
           </li>
           <li class="muted">&middot;</li>
           <li>
-            <a href="https://github.com/assemble/assemble/issues?state=open">Issues</a> 
+            <a href="https://github.com/upstage/assemble-blog-theme/issues?state=open">Issues</a> 
           </li>
           <li class="muted">&middot;</li>
           <li>
-            <a href="https://github.com/assemble/assemble/releases">Releases</a> 
+            <a href="https://github.com/upstage/assemble-blog-theme/releases">Releases</a> 
           </li>
         </ul>
       </div>
@@ -127,4 +137,3 @@
     <script src="assets/js/highlight.js"></script>
   </body>
 </html>
-

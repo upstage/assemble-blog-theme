@@ -13,54 +13,57 @@
 
     <!-- Navbar -->
     <header class="navbar navbar-fixed-top navbar-default" role="banner">
-      <div class="navbar-header">
-        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-          <span class="sr-only">Toggle navigation</span> 
-          <span class="icon-bar"></span> 
-          <span class="icon-bar"></span> 
-          <span class="icon-bar"></span> 
-        </button>
-        <a href="./index.html" class="navbar-brand">Blog</a> 
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span> 
+            <span class="icon-bar"></span> 
+            <span class="icon-bar"></span> 
+            <span class="icon-bar"></span> 
+          </button>
+          <a href="./index.html" class="navbar-brand">Blog</a> 
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+          <ul class="nav navbar-nav pull-right">
+            <li>
+              <a href="./about.html">About</a> 
+            </li>
+          </ul>
+        </nav>
       </div>
-      <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-        <ul class="nav navbar-nav pull-right">
-          <li>
-            <a href="./about.html">About</a> 
-          </li>
-        </ul>
-      </nav>
     </header>
 
     <!-- Content -->
     <div class="container">
-      <h1>My First Post</h1> 
-      <ul class="pager ">
+
+      <!-- Pagination -->
+      <ul class="pager pager-justified">
         <li class="previous">
-          <a href="blog.html">&larr; Previous</a> 
+          <a href="index.html">&larr; Previous</a> 
         </li>
         <li class="next">
-          <a href="2013-01-02.html">Next &rarr;</a> 
+          <a href="2014-01-02.html">Next &rarr;</a> 
         </li>
       </ul>
-      <p>Reprehenderit ipsum fugiat et in incididunt cillum magna veniam quis consequat ex exercitation ut nostrud enim occaecat non est reprehenderit. Lorem ullamco nulla excepteur culpa qui consectetur et excepteur labore aute. Culpa sunt et do labore
-        qui ut consectetur minim tempor minim exercitation exercitation ullamco esse occaecat nulla nostrud et aliqua.</p>
-      <p>Cillum ut ullamco ex ut laborum mollit ea ea sit ea consequat in. Magna mollit enim non in fugiat do officia excepteur qui aliqua occaecat fugiat ullamco minim commodo cillum elit ex laboris. Veniam ut anim irure proident elit veniam ipsum officia
-        dolor nisi cupidatat et magna non do consequat dolor ullamco. Sit officia commodo ex sit nisi tempor incididunt sit dolor.</p>
-      <p>Elit duis ullamco quis nostrud aliqua eu officia duis enim ullamco ex dolore occaecat duis. Laboris quis ex officia sunt excepteur ut tempor reprehenderit sint pariatur ullamco consequat ex do enim adipisicing in. Reprehenderit consectetur cillum
-        id aliquip cupidatat dolore cillum Lorem anim reprehenderit cillum. Dolor aute id occaecat magna mollit consequat commodo occaecat irure consequat exercitation ut ea nisi ipsum fugiat officia amet. Officia occaecat quis commodo Lorem laboris ex
-        minim minim eiusmod quis ipsum eiusmod qui excepteur proident id aliquip ullamco. Aliquip mollit et nisi anim anim enim eiusmod proident eu id proident elit. Nulla ea aliqua nisi ullamco ipsum nisi mollit pariatur ad sint dolor mollit ex in aliquip
-        voluptate.</p>
+
+      <!-- Blog Posts -->
+      <img class="thumbnail" data-src="holder.js/100%x200/auto">
+      <p>Reprehenderit Lorem Lorem cillum tempor in aliqua ex laborum pariatur pariatur. Cillum elit proident mollit sit anim exercitation cillum nulla dolore dolore. Do veniam ad cillum enim nostrud laborum non voluptate amet consequat amet proident.</p>
+      <p>Irure commodo fugiat pariatur excepteur exercitation aliqua id ea ipsum ullamco dolor. Eu enim occaecat nisi ex nostrud sint ipsum irure eiusmod labore excepteur. Exercitation id et culpa minim voluptate pariatur esse ex Lorem dolore id culpa est
+        est ipsum esse. Ullamco deserunt ex amet excepteur quis dolor anim magna duis.</p>
+      <p>Commodo eiusmod do incididunt ex magna commodo nostrud quis id. Exercitation consectetur culpa et cupidatat dolore cillum nulla nisi sunt qui laboris. Ipsum et qui in aliquip do adipisicing ex sunt aliquip aute eiusmod aliqua aliqua sit. Sint pariatur
+        tempor qui commodo occaecat velit magna id qui elit minim pariatur eiusmod eu fugiat. Incididunt occaecat exercitation ullamco elit proident excepteur nostrud fugiat consequat tempor sunt laboris.</p>
       <div id="disqus_thread"></div>
       <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: THIS CODE IS ONLY AN EXAMPLE * * */
          // Required - Replace example with your forum shortname
         var disqus_shortname = 'assemble';
          // a unique identifier for each page where Disqus is present. Example: '/december-2010/the-best-day-of-my-life/'
-        var disqus_identifier = 'http://assemble.io/blog/2013-01-01.html';
+        var disqus_identifier = 'http://upstage.github.io/assemble-blog-theme//2014-01-01.html';
          // a unique title for each page where Disqus is present
         var disqus_title = 'My First Post'; // if no "title" exists, use the basename of the file.
          // a unique URL for each page where Disqus is present
-        var disqus_url = '2013-01-01';
+        var disqus_url = '2014-01-01';
         /* * * DON'T EDIT BELOW THIS LINE * * */
          (function() {
           var dsq = document.createElement('script');
@@ -73,17 +76,19 @@
       <noscript>Please enable JavaScript to view the
         <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a> 
       </noscript>
+
+      <!-- Comments -->
       <div id="disqus_thread"></div>
       <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: THIS CODE IS ONLY AN EXAMPLE * * */
          // Required - Replace example with your forum shortname
         var disqus_shortname = 'assemble';
          // a unique identifier for each page where Disqus is present. Example: '/december-2010/the-best-day-of-my-life/'
-        var disqus_identifier = 'http://assemble.io/blog/2013-01-01.html';
+        var disqus_identifier = 'http://upstage.github.io/assemble-blog-theme//2014-01-01.html';
          // a unique title for each page where Disqus is present
         var disqus_title = 'My First Post'; // if no "title" exists, use the basename of the file.
          // a unique URL for each page where Disqus is present
-        var disqus_url = '2013-01-01';
+        var disqus_url = '2014-01-01';
         /* * * DON'T EDIT BELOW THIS LINE * * */
          (function() {
           var dsq = document.createElement('script');
@@ -101,22 +106,22 @@
     <!-- JS and analytics only. -->
     <footer class="bs-footer" role="contentinfo">
       <div class="container">
-        <p>&quot;Blog theme, for Assemble.&quot;
+        <p>&quot;Blog theme and boilerplate, for Assemble.&quot;
         </p>
         <p>Code licensed under the
-          <a href="_gh_pages/license/" target="_blank">MIT License</a>, documentation under
+          <a href="./license/" target="_blank">MIT License</a>, documentation under
           <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
         <ul class="footer-links">
           <li>
-            <a href="http://assemble.io/blog">Blog</a> 
+            <a href="http://upstage.github.io/assemble-blog-theme/">Blog</a> 
           </li>
           <li class="muted">&middot;</li>
           <li>
-            <a href="https://github.com/assemble/assemble/issues?state=open">Issues</a> 
+            <a href="https://github.com/upstage/assemble-blog-theme/issues?state=open">Issues</a> 
           </li>
           <li class="muted">&middot;</li>
           <li>
-            <a href="https://github.com/assemble/assemble/releases">Releases</a> 
+            <a href="https://github.com/upstage/assemble-blog-theme/releases">Releases</a> 
           </li>
         </ul>
       </div>
@@ -130,4 +135,3 @@
     <script src="assets/js/highlight.js"></script>
   </body>
 </html>
-

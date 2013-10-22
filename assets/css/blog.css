@@ -5872,6 +5872,12 @@ td.visible-print {
 .pager-justified .pager-heading {
   padding: 8px 0 0;
 }
+.pager-justified .disabled > a,
+.pager-justified .disabled > a:hover,
+.pager-justified .disabled > a:focus,
+.pager-justified .disabled > span {
+  cursor: text;
+}
 .post,
 .post-body {
   overflow: hidden;
@@ -5951,4 +5957,11 @@ body {
   background-color: #563D7C;
   border-color: #463265;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+.thumbnail {
+  /*padding: 0;*/
+  border: none;
+  border-radius: 0;
+  margin-bottom: 25px;
+  transition: none;
 }
