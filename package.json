@@ -1,28 +1,27 @@
 {
-  "name": "blog",
-  "description": "The best project ever.",
-  "version": "0.1.0",
-  "homepage": "https://github.com/jonschlinkert/blog",
+  "name": "assemble-blog-theme",
+  "description": "Blog theme and boilerplate for Assemble, the static site generator for Grunt.js, Node.js and Yeoman.",
+  "version": "0.1.1",
+  "homepage": "https://github.com/upstage/assemble-blog-theme",
   "author": {
     "name": "Jon Schlinkert",
     "url": "https://github.com/jonschlinkert"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jonschlinkert/blog.git"
+    "url": "https://github.com/upstage/assemble-blog-theme.git"
   },
   "bugs": {
-    "url": "https://github.com/jonschlinkert/blog/issues"
+    "url": "https://github.com/upstage/assemble-blog-theme/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/jonschlinkert/blog/blob/master/LICENSE-MIT"
+      "url": "https://github.com/upstage/assemble-blog-theme/blob/master/LICENSE-MIT"
     }
   ],
-  "main": "lib/blog",
   "devDependencies": {
-    "assemble": "git://github.com/assemble/assemble",
+    "assemble": "0.4.14",
     "assemble-less": "~0.5.0",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-connect": "~0.5.0",
@@ -34,13 +33,18 @@
     "permalinks": "~0.1.8"
   },
   "keywords": [
-    "static site generator",
-    "yeoman static site generator",
-    "grunt static site generator",
-    "site generator",
-    "component generator",
+    "upstage",
+    "assemble",
     "blog generator",
+    "blog",
+    "boilerplate",
+    "component generator",
+    "grunt static site generator",
     "handlebars",
-    "templates"
+    "site generator",
+    "static site generator",
+    "templates",
+    "theme",
+    "yeoman static site generator"
   ]
 }
