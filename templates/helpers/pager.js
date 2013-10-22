@@ -20,19 +20,18 @@ module.exports.register = function (Handlebars, options) {
   /**
    * {{pager}}
    */
-  exports.pager = function(context, modifier) {
-    if(_.isUndefined(modifier)) {
-      modifier = '';
-    } else {
-      modifier = modifier;
-    }
+  exports.pager = function(context, opts) {
+    
+    opts = _.extend({}, opts, context, this);
+
     var markup = [
-      '<ul class="pager '  + modifier + '">',
-      '  <li class="previous"><a href="#">&larr; Previous</a></li>',
-      '  <li class="next"><a href="#">Next &rarr;</a></li>',
+      '<ul class="pager {{modifier}}">',
+      '  <li class="previous"><a href="{{relative page.dest prev.dest}}">&larr; Previous</a></li>',
+      '  <li class="next"><a href="{{relative page.dest next.dest}}">Next &rarr;</a></li>',
       '</ul>'
     ].join('\n');
-    return new Handlebars.SafeString(markup);
+    var template = Handlebars.compile(markup);
+    return new Handlebars.SafeString(template(opts));
   };
 
 
