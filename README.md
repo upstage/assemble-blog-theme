@@ -1,8 +1,13 @@
 # blog [![NPM version](https://badge.fury.io/js/blog.png)](http://badge.fury.io/js/blog)
 
-> Blog theme and boilerplate for [Assemble](http://assemble.io), the static site generator for Node.js, Grunt.js, and Yeoman.
+> Fully responsive, mobile-first blog theme and boilerplate for [Assemble](http://assemble.io)
 
 [Also see examples →](./EXAMPLES.md)
+
+
+## Overview
+The theme is based on [Bootstrap](https://github.com/twbs/bootstrap).
+
 
 
 ## Examples
