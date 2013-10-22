@@ -1,19 +1,54 @@
+# Build
+dest: _gh_pages
+
+
+# Site metadata
 title: Blog
-description: "Blog theme, for Assemble."
+lead: false
+description: >
+  "Blog theme, for Assemble."
 
-
+# License info
 license:
   type: MIT License
-  link: ./license.html
+  url: ./license/index.html
 
 
-root: _gh_pages
-dest: <%= site.root %>
-
-
+# URLs
 blog: http://assemble.io/blog
 repo: https://github.com/assemble/assemble
+download:
+  source: <%= site.repo %>/archive/master.zip
+  source: <%= site.repo %>/archive/master.zip
 
 
+# SEO/SEM
+google_analytics: false
+google_site_id: false
+
+
+# Comments
 disqus:
   shortname: assemble
+
+
+# Social
+social:
+  twitter:
+    via: jonschlinkert
+    username: assemble
+  facebook: false
+  gplus: false
+  hn: false
+  google: false
+
+
+# Sharing
+social:
+  twitter: false
+  facebook: false
+  gplus: false
+  hn: false
+  google: false
+
+
