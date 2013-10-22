@@ -1,19 +1,30 @@
-# blog [![NPM version](https://badge.fury.io/js/blog.png)](http://badge.fury.io/js/blog)  [![Build Status](true.png)](true)
+# blog [![NPM version](https://badge.fury.io/js/blog.png)](http://badge.fury.io/js/blog)
 
-> The best project ever.
+> Blog theme and boilerplate for [Assemble](http://assemble.io), the static site generator for Node.js, Grunt.js, and Yeoman.
 
 [Also see examples →](./EXAMPLES.md)
 
-## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt][].
 
+## Examples
 
-## License
-Copyright (c) 2013 Jon Schlinkert
-Licensed under the [MIT license](LICENSE-MIT).
+![image](https://f.cloud.github.com/assets/383994/1379436/2791d8ce-3aee-11e3-81af-a1605b480c55.png)
 
 ***
 
-Project created by [Jon Schlinkert](https://github.com/jonschlinkert).
+![image](https://f.cloud.github.com/assets/383994/1379439/36c8c5fa-3aee-11e3-99fb-daa28b7a9e7b.png)
 
-_This file was generated on Friday, October 18, 2013._
+
+## Contributing
+In lieu of a formal styleguide, take care to maintain the existing coding style.
+
+## Author
+
+**Jon Schlinkert**
+
++ [twitter/jonschlinkert](http://twitter.com/jonschlinkert)
++ [github/jonschlinkert](http://github.com/jonschlinkert)
+
+
+## License and Copyright
+Licensed under the [MIT License](./LICENSE-MIT).
+Copyright (c) Jon Schlinkert, contributors.
