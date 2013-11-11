@@ -2,7 +2,6 @@
 
 > Fully responsive, mobile-first blog theme and boilerplate for [Assemble](http://assemble.io)
 
-[Also see examples →](./EXAMPLES.md)
 
 
 ## Overview
