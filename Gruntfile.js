@@ -53,9 +53,9 @@ module.exports = function(grunt) {
         // Extensions
         helpers: ['helper-prettify', 'helper-compose', 'templates/helpers/*.js'],
         // plugins: ['permalinks'],
-        // permalinks: {
-        //   preset: 'pretty'
-        // }
+        permalinks: {
+          preset: 'pretty'
+        },
         // Templates and data
         data: ['data/**/*.{json,yml}'],
         partials: ['templates/includes/*.hbs'],
