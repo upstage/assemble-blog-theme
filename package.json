@@ -27,7 +27,7 @@
     "grunt-contrib-connect": "~0.5.0",
     "grunt-contrib-jshint": "~0.6.0",
     "grunt-contrib-watch": "~0.5.1",
-    "helper-compose": "~0.1.1",
+    "handlebars-helper-compose": "~0.2.11",
     "helper-prettify": "~0.1.7",
     "lorem-ipsum": "~0.1.1",
     "permalinks": "~0.1.8",
