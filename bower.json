@@ -1,8 +1,12 @@
 {
   "name": "assemble-blog-theme",
+  "version": "0.2.0",
   "dependencies": {
     "bootstrap": "~3.0.2",
     "holderjs": "~2.2.0",
     "highlightjs": "~7.3.0"
-  }
+  },
+  "main": [
+    null
+  ]
 }

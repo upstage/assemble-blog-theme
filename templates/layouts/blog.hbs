@@ -1,11 +1,13 @@
 ---
-layout: default.hbs
+layout: default
 ---
 <!-- Pagination -->
 {{pager pagination modifier="pager-justified"}}
 
 <!-- Blog Posts -->
-{{> body }}
+{{#markdown}}
+  {{> body }}
+{{/markdown}}
 
 <!-- Comments -->
 {{> disqus }}

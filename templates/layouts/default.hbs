@@ -1,6 +1,4 @@
----
-layout: pretty.hbs
----
+{{#prettify}}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,16 +6,14 @@ layout: pretty.hbs
   </head>
   <body>
     <a class="sr-only" href="#content">Skip navigation</a>
-    <!-- Navbar -->
     {{> nav-main }}
 
-    <!-- Content -->
     <div class="container">
+      <!-- page content gets inserted here -->
       {{> body }}
     </div>
 
-    <!-- JS and analytics only. -->
     {{> footer }}
-
   </body>
 </html>
+{{/prettify}}

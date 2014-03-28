@@ -1,7 +1,7 @@
 {
   "name": "assemble-blog-theme",
   "description": "Blog theme and boilerplate for Assemble, the static site generator for Grunt.js, Node.js and Yeoman.",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "homepage": "https://github.com/upstage/assemble-blog-theme",
   "author": {
     "name": "Jon Schlinkert",
@@ -22,6 +22,7 @@
   ],
   "devDependencies": {
     "assemble": "~0.4.37",
+    "assemble-contrib-permalinks": "~0.3.6",
     "assemble-less": "~0.7.0",
     "grunt": "~0.4.4",
     "grunt-contrib-clean": "~0.5.0",
@@ -29,10 +30,10 @@
     "grunt-contrib-copy": "~0.5.0",
     "grunt-contrib-jshint": "~0.9.2",
     "grunt-contrib-watch": "~0.6.1",
-    "handlebars-helper-compose": "~0.2.12",
     "handlebars-helper-lorem": "~0.1.0",
     "handlebars-helper-prettify": "~0.2.1",
-    "lodash": "~2.4.1"
+    "lodash": "~2.4.1",
+    "relative": "~0.1.2"
   },
   "keywords": [
     "handlebars-helper-compose",

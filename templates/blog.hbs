@@ -1,0 +1,20 @@
+---
+title: Home
+---
+
+{{pager blog.posts}}
+
+{{#each blog.posts}}
+<article class="post post-item">
+  <a class="pull-right" href="#">
+    <img class="post-object" data-src="{{assets}}/js/holder.js/72x72" alt="Generic placeholder image" src="data:image/png;base64,">
+  </a>
+  <div class="post-body">
+    <a href="blog/{{filename}}"><h2 class="post-heading">{{data.title}}</h2></a>
+    {{default (lorem sentence) ''}}
+  </div>
+  <div class="post-footer">
+    <a class="text-muted" href="blog/{{filename}}">Read more</a>
+  </div>
+</article>
+{{/each}}

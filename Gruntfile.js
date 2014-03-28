@@ -13,83 +13,73 @@ module.exports = function(grunt) {
   grunt.initConfig({
 
     // Project metadata
-    pkg   : grunt.file.readJSON('package.json'),
+    pkg: grunt.file.readJSON('package.json'),
+    site: grunt.file.readYAML('.assemblerc.yml'),
+    blog: grunt.file.readJSON('data/blog.json'),
     vendor: grunt.file.readJSON('.bowerrc').directory,
-    site  : grunt.file.readYAML('_config.yml'),
-    pages : grunt.file.readJSON('data/pages.json'),
-
-
-    config: {
-      src: 'src',
-      dist: '<%= site.dest %>',
-      bootstrap: '<%= vendor %>/bootstrap/less',
-      jquery: '<%= vendor %>/jquery',
-      holder: '<%= vendor %>/holderjs',
-      highlight: '<%= vendor %>/highlightjs'
-    },
-
 
     /**
      * Lint JavaScript
      */
+
     jshint: {
-      all: ['Gruntfile.js', 'helpers/*.js'],
       options: {
         jshintrc: '.jshintrc'
-      }
+      },
+      all: [
+        'Gruntfile.js',
+        '<%= site.helpers %>/*.js'
+      ]
     },
 
 
     /**
-     * Build HTML from templates and data
+     * HTML
      */
+
+    // Build HTML from templates and data
     assemble: {
       options: {
         flatten: true,
+        assets: '<%= site.assets %>',
 
-        // Custom property for _config.yml
+        // Metadata
         site: '<%= site %>',
+        root: '<%= site.dest %>',
+        data: '<%= site.data %>/**/*.{json,yml}',
 
         // Extensions
-        helpers: ['helper-prettify', 'helper-compose', 'templates/helpers/*.js'],
-        // plugins: ['permalinks'],
-        permalinks: {
-          preset: 'pretty'
-        },
-        // Templates and data
-        data: ['data/**/*.{json,yml}'],
-        partials: ['templates/includes/*.hbs'],
-        layoutdir: 'templates/layouts',
-        layout: 'default.hbs',
+        helpers: '<%= site.helpers %>/*.js',
 
-        // Site variables
-        assets: '<%= site.dest %>/assets',
-        root: '<%= site.dest %>',
+        // Templates
+        partials: ['<%= site.includes %>/*.hbs'],
+        layoutdir: '<%= site.layoutdir %>',
+        layoutext: '<%= site.layoutext %>',
+        layout: '<%= site.layout %>'
       },
+
       // Generate the main pages of the site.
       site: {
         files: {
-          '<%= site.dest %>/': ['templates/*.hbs']
+          '<%= site.dest %>/': ['<%= site.pages %>/*.hbs']
         }
       },
-      // Generate posts from "./data/pages.json"
+
+      // Generate posts from JSON data. see: './data/pages.json'
       blog: {
         options: {
-          pages: '<%= pages.posts %>'
+          pages: '<%= blog.posts %>'
         },
         files: {
-          '<%= site.dest %>/': ['templates/index.hbs']
+          '<%= site.dest %>/blog/': ['<%= site.pages %>/blog.hbs']
         }
       },
-      // Generate posts by forcing Handlebars
-      // to recognize `.md` files as templates.
+
+      // Generate posts from markdown files
       blog_alt: {
-        options: {
-          layout: 'blog.hbs',
-          engine: 'handlebars'
-        },
+        options: {layout: 'blog'},
         files: {
-          '<%= site.dest %>/alt/': ['templates/list.hbs', 'posts/*.md']
+          '<%= site.dest %>/alt/': ['<%= site.posts %>/*.md']
         }
       }
     },
@@ -98,9 +88,10 @@ module.exports = function(grunt) {
     /**
      * Compile LESS to CSS
      */
+
     less: {
       options: {
-        paths: ['<%= config.bootstrap %>', 'theme/components'],
+        paths: ['<%= vendor %>/bootstrap/less', 'theme/components'],
       },
       bootstrap: {
         src: ['theme/theme.less'],
@@ -112,6 +103,7 @@ module.exports = function(grunt) {
     /**
      * Start a connect web server.
      */
+
     connect: {
       options: {
         port: 9000,
@@ -122,9 +114,7 @@ module.exports = function(grunt) {
       livereload: {
         options: {
           open: true,
-          base: [
-            '<%= config.dist %>'
-          ]
+          base: ['<%= site.dest %>']
         }
       }
     },
@@ -134,31 +124,31 @@ module.exports = function(grunt) {
      */
     copy: {
       bootstrap: {
-        expand: true,
-        cwd: 'vendor/bootstrap/dist/',
-        src: [
-          'js/*',
-          'fonts/*'],
-        dest: '<%= assemble.options.assets %>/'
-      },
-      bootstrapcss: {
-        expand: true,
-        cwd: 'vendor/bootstrap/assets/',
-        src: [
-          'js/*',
-          'fonts/*'],
-        dest: '<%= assemble.options.assets %>/'
+        files: [
+          {
+            expand: true,
+            cwd: '<%= vendor %>/bootstrap/dist/',
+            src: ['js/*', 'fonts/*'],
+            dest: '<%= assemble.options.assets %>/'
+          },
+          {
+            expand: true,
+            cwd: 'vendor/bootstrap/assets/',
+            src: ['js/*', 'fonts/*'],
+            dest: '<%= assemble.options.assets %>/'
+          }
+        ]
       },
       jquery: {
-        src: '<%= config.jquery %>/jquery.min.js',
+        src: '<%= vendor %>/jquery/jquery.min.js',
         dest: '<%= assemble.options.assets %>/js/jquery.js'
       },
       holder: {
-        src: '<%= config.holder %>/holder.js',
+        src: '<%= vendor %>/holderjs/holder.js',
         dest: '<%= assemble.options.assets %>/js/holder.js'
       },
       highlight: {
-        src: '<%= config.highlight %>/highlight.pack.js',
+        src: '<%= vendor %>/highlightjs/highlight.pack.js',
         dest: '<%= assemble.options.assets %>/js/highlight.js'
       },
     },

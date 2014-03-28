@@ -1,0 +1,42 @@
+{
+  "content": "./content",
+  "thumbnail": "<img class=\"thumbnail\" data-src=\"holder.js/100%x200/auto\">",
+  "layouts": {
+    "blog": "blog"
+  },
+  "posts": [
+    {
+      "data": {
+        "title": "My First Post",
+        "date": "2014-04-01",
+        "layout": "<%= blog.layouts.blog %>",
+        "categories": [],
+        "tags": []
+      },
+      "content": "<%= blog.thumbnail %>{{lorem ipsum.paragraph}}",
+      "filename": "2014-04-01.html"
+    },
+    {
+      "data": {
+        "title": "My Second Post",
+        "date": "2014-04-02",
+        "layout": "<%= blog.layouts.blog %>",
+        "categories": [],
+        "tags": []
+      },
+      "content": "<%= blog.thumbnail %>{{lorem ipsum.paragraph}}",
+      "filename": "2014-04-02.html"
+    },
+    {
+      "data": {
+        "title": "My Third Post",
+        "date": "2014-04-02",
+        "layout": "<%= blog.layouts.blog %>",
+        "categories": [],
+        "tags": []
+      },
+      "content": "<%= blog.thumbnail %>{{lorem ipsum.paragraph}}",
+      "filename": "2014-04-03.html"
+    }
+  ]
+}
