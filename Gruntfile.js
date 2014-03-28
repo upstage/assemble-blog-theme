@@ -43,25 +43,25 @@ module.exports = function(grunt) {
     assemble: {
       options: {
         flatten: true,
+        assets: '<%= site.assets %>',
 
-        // Custom property for _config.yml
+        // Metadata
         site: '<%= site %>',
+        root: '<%= site.dest %>',
 
         // Extensions
-        helpers: ['helper-prettify', 'helper-compose', 'templates/helpers/*.js'],
+        helpers: ['templates/helpers/*.js'],
         // plugins: ['permalinks'],
         // permalinks: {
         //   preset: 'pretty'
         // }
+
         // Templates and data
         data: ['data/**/*.{json,yml}'],
         partials: ['templates/includes/*.hbs'],
         layoutdir: 'templates/layouts',
         layout: 'default.hbs',
 
-        // Site variables
-        assets: '<%= site.dest %>/assets',
-        root: '<%= site.dest %>',
       },
       // Generate the main pages of the site.
       site: {
