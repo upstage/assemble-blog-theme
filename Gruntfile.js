@@ -22,7 +22,10 @@ module.exports = function(grunt) {
     config: {
       src: 'src',
       dist: '<%= site.dest %>',
-      bootstrap: '<%= vendor %>/bootstrap/less'
+      bootstrap: '<%= vendor %>/bootstrap/less',
+      jquery: '<%= vendor %>/jquery',
+      holder: '<%= vendor %>/holderjs',
+      highlight: '<%= vendor %>/highlightjs'
     },
 
 
@@ -43,25 +46,25 @@ module.exports = function(grunt) {
     assemble: {
       options: {
         flatten: true,
-        assets: '<%= site.assets %>',
 
-        // Metadata
+        // Custom property for _config.yml
         site: '<%= site %>',
-        root: '<%= site.dest %>',
 
         // Extensions
-        helpers: ['templates/helpers/*.js'],
+        helpers: ['helper-prettify', 'helper-compose', 'templates/helpers/*.js'],
         // plugins: ['permalinks'],
-        // permalinks: {
-        //   preset: 'pretty'
-        // }
-
+        permalinks: {
+          preset: 'pretty'
+        },
         // Templates and data
         data: ['data/**/*.{json,yml}'],
         partials: ['templates/includes/*.hbs'],
         layoutdir: 'templates/layouts',
         layout: 'default.hbs',
 
+        // Site variables
+        assets: '<%= site.dest %>/assets',
+        root: '<%= site.dest %>',
       },
       // Generate the main pages of the site.
       site: {
@@ -97,7 +100,7 @@ module.exports = function(grunt) {
      */
     less: {
       options: {
-        paths: ['theme/bootstrap', 'theme/components'],
+        paths: ['<%= config.bootstrap %>', 'theme/components'],
       },
       bootstrap: {
         src: ['theme/theme.less'],
@@ -124,6 +127,40 @@ module.exports = function(grunt) {
           ]
         }
       }
+    },
+
+    /**
+     * Copy vendor dist to assets
+     */
+    copy: {
+      bootstrap: {
+        expand: true,
+        cwd: 'vendor/bootstrap/dist/',
+        src: [
+          'js/*',
+          'fonts/*'],
+        dest: '<%= assemble.options.assets %>/'
+      },
+      bootstrapcss: {
+        expand: true,
+        cwd: 'vendor/bootstrap/assets/',
+        src: [
+          'js/*',
+          'fonts/*'],
+        dest: '<%= assemble.options.assets %>/'
+      },
+      jquery: {
+        src: '<%= config.jquery %>/jquery.min.js',
+        dest: '<%= assemble.options.assets %>/js/jquery.js'
+      },
+      holder: {
+        src: '<%= config.holder %>/holder.js',
+        dest: '<%= assemble.options.assets %>/js/holder.js'
+      },
+      highlight: {
+        src: '<%= config.highlight %>/highlight.pack.js',
+        dest: '<%= assemble.options.assets %>/js/highlight.js'
+      },
     },
 
 
@@ -155,6 +192,7 @@ module.exports = function(grunt) {
 
   // Load npm plugins to provide necessary tasks.
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
@@ -165,5 +203,5 @@ module.exports = function(grunt) {
   grunt.registerTask('design', ['clean', 'assemble', 'less:bootstrap', 'watch:design', 'connect']);
 
   // Default tasks to be run.
-  grunt.registerTask('default', ['clean', 'jshint', 'less', 'assemble']);
+  grunt.registerTask('default', ['clean', 'jshint', 'less', 'copy', 'assemble']);
 };
